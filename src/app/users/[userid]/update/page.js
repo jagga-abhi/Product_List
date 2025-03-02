@@ -6,7 +6,7 @@ export default function Page({params}){
     const [age,setAge] = useState("")
     const [email,setEmail] = useState("")
     const getUserDetails =async ()=>{
-       let data = await fetch(`http://localhost:3000/api/users/${id}`)
+       let data = await fetch(`http://18.213.5.239:3000/api/users/${id}`)
        data= await data.json()
        setName(data.result.name)
        setAge(data.result.age)
@@ -14,7 +14,7 @@ export default function Page({params}){
     }
 
     const update = async()=>{
-        let result = await fetch(`http://localhost:3000/api/users/${id}`,{
+        let result = await fetch(`http://18.213.5.239:3000/api/users/${id}`,{
             method:"PUT",
             body: JSON.stringify({name,age,email})
         })

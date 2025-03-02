@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./page.module.css"; // Assuming you have a page.module.css file for styling
 
 const getProducts = async () => {
-  let data = await fetch("http://localhost:3000/api/products", { cache: "no-cache" });
+  let data = await fetch("http://18.213.5.239:3000/api/products", { cache: "no-cache" });
   data = await data.json();
   if (data.success) {
     return data.result;

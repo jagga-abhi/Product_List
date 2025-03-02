@@ -5,7 +5,7 @@ export default function Page(){
     const [age,setAge] = useState("")
     const [email,setEmail] = useState("")
     const addUser = async ()=>{
-       let response = await fetch("http://localhost:3000/api/users",{
+       let response = await fetch("http://18.213.5.239:3000/api/users",{
         method:"Post",
         body:JSON.stringify({name,email,age})
        })

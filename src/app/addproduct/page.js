@@ -9,7 +9,7 @@ export default function Page() {
   const [company, setCompany] = useState("");
   const [category, setCategory] = useState("");
   const addProduct = async () => {
-    let result = await fetch("http://localhost:3000/api/products", {
+    let result = await fetch("http://18.213.5.239:3000/api/products", {
       method: "POST",
       body: JSON.stringify({ name, price, color, company, category }),
     });

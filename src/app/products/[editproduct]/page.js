@@ -16,7 +16,7 @@ export default function Page(props) {
   },[])
 
   const getProductDetail = async()=>{
-    let productData = await fetch(`http://localhost:3000/api/products/${props?.params?.editproduct}`)
+    let productData = await fetch(`http://18.213.5.239:3000/api/products/${props?.params?.editproduct}`)
     productData = await productData.json()
     if(productData.success){
       setName(productData?.result?.name)
@@ -28,7 +28,7 @@ export default function Page(props) {
   }
 
   const updateProduct = async()=>{
-    let data = await fetch(`http://localhost:3000/api/products/${props?.params?.editproduct}`,{
+    let data = await fetch(`http://18.213.5.239:3000/api/products/${props?.params?.editproduct}`,{
       method:"PUT",
       body: JSON.stringify({name,price,color,category,company})
     })
